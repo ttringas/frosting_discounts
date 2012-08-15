@@ -1,4 +1,12 @@
 ShopifyDiscounts::Application.routes.draw do
+
+  match "/test" => "pages#test"
+  match "/" => "pages#home"
+
+  resources :discounts, only: [:create, :update, :destroy, :index]
+
+  root to: "discounts#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

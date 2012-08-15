@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: MyString
+  value: 1.5
+  limit: 1
+  expiration: 2012-08-15 12:45:38
+
+two:
+  code: MyString
+  value: 1.5
+  limit: 1
+  expiration: 2012-08-15 12:45:38
