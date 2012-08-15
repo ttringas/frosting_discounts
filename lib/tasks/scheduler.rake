@@ -51,6 +51,7 @@ task :update_discounts => :environment do
       new_codes.each do |c|
         page.form_with(:action => "#{BASE_URL}/discounts") do |f|
           f["discount[code]"] = c.code
+          f["discount[ends_at]"] = (Date.today + 1).strftime("%Y-%-m-%-d")
           discount_value_fields = f.fields_with(:id => 'discount_value')
           discount_value_fields.each do |textfield|
             textfield.value = c.value
