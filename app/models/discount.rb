@@ -1,6 +1,6 @@
 class Discount < ActiveRecord::Base
 
-  require 'Mechanize'
+  # require 'Mechanize'
 
   attr_accessible :code, :expiration, :limit, :value, :greater_than
 
