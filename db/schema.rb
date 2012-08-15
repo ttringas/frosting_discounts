@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815154538) do
+ActiveRecord::Schema.define(:version => 20120815163656) do
 
   create_table "discounts", :force => true do |t|
     t.string   "code"
     t.float    "value"
     t.integer  "limit"
     t.datetime "expiration"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "greater_than"
   end
 
 end
