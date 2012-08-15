@@ -1,10 +1,7 @@
-class Discount < ActiveRecord::Base
+desc "Update the discount codes"
+task :update_discounts => :environment do
 
-  # require 'Mechanize'
-
-  attr_accessible :code, :expiration, :limit, :value, :greater_than
-
-  DISCOUNTS = [
+    DISCOUNTS = [
     {code: "8m7677", amount:  0.50, greater_than: "6"},
     {code: "8m6749", amount:  4.00, greater_than: "12"},
     {code: "8m5398", amount:  4.50, greater_than: "18"},
@@ -23,10 +20,7 @@ class Discount < ActiveRecord::Base
   USER = 'tyler@tylertringas.com'
   PASSWORD = 'MMl25xle'
 
-
-  def self.build_new_codes
-
-    Discount.destroy_all
+      Discount.destroy_all
 
     new_codes = []
     
@@ -64,6 +58,5 @@ class Discount < ActiveRecord::Base
         end.click_button        
       end
     end
-    
-  end
+
 end
