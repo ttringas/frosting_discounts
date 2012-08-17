@@ -30,7 +30,7 @@ task :update_discounts => :environment do
       @discount.attributes = {
         code: @code,
         value: d[:amount],
-        expiration: Date.today + 1,
+        expiration: Date.today + 2,
         greater_than: d[:greater_than]
       }
       @discount.save
